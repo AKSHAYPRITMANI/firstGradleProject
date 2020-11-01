@@ -1,12 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<%@ taglib prefix="form" uri="http://www.springfamework.org/tags/form"%>
-<!DOCTYPE html>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <html lang="en">
 
 <head>
   <!-- Required meta tags -->
-  <meta charset="utf-8">
+  <meta http-equiv ="Content-Type" content="text/html; charset=ISO-8859-1">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Emerging Five</title>
   <!-- plugins:css -->
@@ -39,7 +38,7 @@
                     <div class="input-group-prepend">
                       <span class="input-group-text"><i class="mdi mdi-account-outline"></i></span>
                     </div>
-                    <form:input path ="userName"class="form-control" placeholder="Name">
+                    <form:input path="userName" class="form-control" placeholder="Name"/>
                   </div>
                 </div>
                 <div class="form-group">
@@ -47,7 +46,7 @@
                     <div class="input-group-prepend">
                       <span class="input-group-text"><i class="mdi mdi-account-outline"></i></span>
                     </div>
-                    <form:input path ="email"class="form-control" placeholder="Email Id">
+                    <form:input path="email" class="form-control" placeholder="Email Id"/>
                   </div>
                 </div>
                 <div class="form-group">
@@ -55,7 +54,7 @@
                     <div class="input-group-prepend">
                       <span class="input-group-text"><i class="mdi mdi-lock-outline"></i></span>
                     </div>
-                    <form:input path ="email" type ="password"class="form-control" placeholder="Password">
+                    <form:input path="password" type ="password" class="form-control" placeholder="Password"/>
                   </div>
                 </div>
                 <div class="form-group">
@@ -63,7 +62,7 @@
                     <div class="input-group-prepend">
                       <span class="input-group-text"><i class="mdi mdi-lock-outline"></i></span>
                     </div>
-                    <input type="password" class="form-control" placeholder="Confirm Password">
+                    <input type="password" class="form-control" placeholder="Confirm Password"/>
                   </div>
                 </div>
 

@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 
 @Repository
 public class UserDAO
@@ -18,5 +19,4 @@ public class UserDAO
         Session currentSession = entityManager.unwrap(Session.class);
         currentSession.save(user);
     }
-
 }

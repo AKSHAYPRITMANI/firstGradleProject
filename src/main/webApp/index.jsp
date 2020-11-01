@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+    pageEncoding="ISO-8859-1" isELIgnored = "false"%>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -31,14 +32,15 @@
           </div>
           <div class="col-12 col-md-6 h-100 bg-white">
             <div class="auto-form-wrapper d-flex align-items-center justify-content-center flex-column">
-              <form action="#">
+              <form action="login" method="post">
                 <div align="center" style="padding: 2rem 0rem;"><img src="resource/images/logo_01.png" alt="bag" class="img-fluid"></div>
                 <div class="form-group">
                   <div class="input-group">
                     <div class="input-group-prepend">
                       <span class="input-group-text"><i class="mdi mdi-account-outline"></i></span>
                     </div>
-                    <input type="text" class="form-control" placeholder="Username">
+                    ${SPRING_SECURITY_LAST_EXCEPTION.message}
+                    <input type="text" class="form-control" name="userName" placeholder="Username">
                   </div>
                 </div>
                 <div class="form-group">
@@ -46,11 +48,13 @@
                     <div class="input-group-prepend">
                       <span class="input-group-text"><i class="mdi mdi-lock-outline"></i></span>
                     </div>
-                    <input type="password" class="form-control" placeholder="Password">
+                    <input type="password" class="form-control" name="password" placeholder="Password">
                   </div>
                 </div>
                 <div class="form-group">
-                  <a href="product_master.html" class="btn btn-info btn-fw btn-padding">SIGN IN</a>
+
+                  <input type="submit" name="submit"  class="btn btn-info btn-fw btn-padding" value="SIGN IN"/>
+                  <!-- <a href="product_master.html" class="btn btn-info btn-fw btn-padding">SIGN IN</a> -->
                   <a href="/signup" class="btn btn-info btn-fw btn-padding float-right">SIGN UP</a>
                 </div>
                 <div class="wrapper mt-5 text-gray">

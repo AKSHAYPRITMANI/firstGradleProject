@@ -14,7 +14,7 @@ public class HomepageController
     @Autowired
     private UserService userService;
 
-    @RequestMapping("/")
+    @RequestMapping("/login")
     public String Frontpage()
     {
         return "index.jsp";
@@ -29,7 +29,7 @@ public class HomepageController
     @RequestMapping("/addUser")
     public ModelAndView addUser(@ModelAttribute("user") User user)
     {
-        ModelAndView mav =new ModelAndView("index.jsp");
+        ModelAndView mav = new ModelAndView("index.jsp");
         userService.save(user);
         return mav;
     }
